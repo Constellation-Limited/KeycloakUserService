@@ -1,5 +1,6 @@
 using FastEndpoints;
 using FastEndpoints.Swagger;
+using KeycloakUserService.DAL;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -18,6 +19,8 @@ if (builder.Environment.IsDevelopment())
         };
     });
 }
+
+builder.Services.AddDataAccess(builder.Configuration);
 
 var app = builder.Build();
 
