@@ -3,6 +3,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace KeycloakUserService.DAL.Interfaces;
 
+/// <summary>
+/// Internal Keycloak based database.
+/// </summary>
 public interface IKeycloakUserServiceDbContext
 {
     /// <summary>

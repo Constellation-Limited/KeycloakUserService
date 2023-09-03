@@ -1,12 +1,12 @@
 ﻿using System.Reflection;
 using KeycloakUserService.DAL.Interfaces;
 using KeycloakUserService.Domain.Entities;
-using KeycloakUserService.Domain.Shared.Entity.Implementation;
 using KeycloakUserService.Domain.Shared.Events.Base;
 using Microsoft.EntityFrameworkCore;
 
 namespace KeycloakUserService.DAL;
 
+/// <inheritdoc cref="IKeycloakUserServiceDbContext" />
 public class KeycloakUserServiceDbContext : DbContext, IKeycloakUserServiceDbContext
 {
     /// <inheritdoc />

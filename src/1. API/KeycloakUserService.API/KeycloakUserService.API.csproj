@@ -13,7 +13,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\KeycloakUserService.API.Models\KeycloakUserService.API.Models.csproj" />
-        <ProjectReference Include="..\..\4. DAL\KeycloakUserService.DAL\KeycloakUserService.DAL.csproj" />
+      <ProjectReference Include="..\..\4. DAL\KeycloakUserService.DAL\KeycloakUserService.DAL.csproj" />
     </ItemGroup>
 
 </Project>

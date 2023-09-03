@@ -2,6 +2,9 @@
 
 namespace KeycloakUserService.Domain.Shared.Dispatchers.Interfaces;
 
+/// <summary>
+/// Domain event dispatcher.
+/// </summary>
 public interface IDomainEventDispatcher
 {
     /// <summary>

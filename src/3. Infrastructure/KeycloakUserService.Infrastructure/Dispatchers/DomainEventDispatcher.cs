@@ -5,6 +5,7 @@ using KeycloakUserService.Domain.Shared.Handlers.Interfaces;
 
 namespace KeycloakUserService.Infrastructure.Dispatchers;
 
+/// <inheritdoc />
 public class DomainEventDispatcher : IDomainEventDispatcher
 {
     private readonly IServiceProvider _serviceProvider;
@@ -14,6 +15,7 @@ public class DomainEventDispatcher : IDomainEventDispatcher
         _serviceProvider = serviceProvider;
     }
     
+    /// <inheritdoc />
     public Task DispatchEvent(BaseDomainEvent domainEvent)
     {
         var handlerType = typeof(IDomainEventHandler<>).MakeGenericType(domainEvent.GetType());
