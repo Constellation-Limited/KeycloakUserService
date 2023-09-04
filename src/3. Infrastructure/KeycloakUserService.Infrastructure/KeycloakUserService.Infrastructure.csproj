@@ -7,6 +7,9 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <ProjectReference Include="..\KeycloakUserService.Infrastructure.Services\KeycloakUserService.Infrastructure.Services.csproj" />
+        <ProjectReference Include="..\KeycloakUserService.Infrastructure.Data\KeycloakUserService.Infrastructure.Data.csproj" />
+        <ProjectReference Include="..\..\0. Common\KeycloakUserService.Common\KeycloakUserService.Common.csproj" />
         <ProjectReference Include="..\..\2. Domain\KeycloakUserService.Domain.Shared\KeycloakUserService.Domain.Shared.csproj" />
     </ItemGroup>
 

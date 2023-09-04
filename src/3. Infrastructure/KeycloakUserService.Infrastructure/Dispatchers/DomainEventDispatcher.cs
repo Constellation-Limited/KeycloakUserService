@@ -2,26 +2,29 @@
 using KeycloakUserService.Domain.Shared.Dispatchers.Interfaces;
 using KeycloakUserService.Domain.Shared.Events.Base;
 using KeycloakUserService.Domain.Shared.Handlers.Interfaces;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace KeycloakUserService.Infrastructure.Dispatchers;
 
 /// <inheritdoc />
 public class DomainEventDispatcher : IDomainEventDispatcher
 {
-    private readonly IServiceProvider _serviceProvider;
+    private readonly IServiceScopeFactory _serviceScopeFactory;
 
-    public DomainEventDispatcher(IServiceProvider serviceProvider)
+    public DomainEventDispatcher(IServiceScopeFactory serviceScopeFactory)
     {
-        _serviceProvider = serviceProvider;
+        _serviceScopeFactory = serviceScopeFactory;
     }
     
     /// <inheritdoc />
     public Task DispatchEvent(BaseDomainEvent domainEvent)
     {
+        using var scope = _serviceScopeFactory.CreateScope();
+        
         var handlerType = typeof(IDomainEventHandler<>).MakeGenericType(domainEvent.GetType());
-        var handlers = _serviceProvider.GetService(typeof(IEnumerable<>).MakeGenericType(handlerType)) as IEnumerable;
+        var handlers = scope.ServiceProvider.GetServices(handlerType).ToList();
 
-        if (handlers is null)
+        if (handlers is not { Count: > 0 })
             return Task.CompletedTask;
         
         return Task.WhenAll(

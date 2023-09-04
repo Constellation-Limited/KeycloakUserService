@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\2. Domain\KeycloakUserService.Domain.Contracts\KeycloakUserService.Domain.Contracts.csproj" />
+      <ProjectReference Include="..\..\4. DAL\KeycloakUserService.DAL\KeycloakUserService.DAL.csproj" />
+    </ItemGroup>
+    
+</Project>

@@ -12,11 +12,23 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3. Infrastructure", "src\3.
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4. DAL", "src\4. DAL", "{C8603446-AA6C-4A66-81A2-97B8A91B44A3}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5. Workers", "src\5. Workers", "{06E0A9AB-914E-4906-B604-0CBBFE4BF416}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "6. Client", "src\6. Client", "{71B6088F-EAC7-4FCB-8029-EA2E153838B1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KeycloakUserService.Common", "src\0. Common\KeycloakUserService.Common\KeycloakUserService.Common.csproj", "{EE5E9D19-9776-4CFA-A0E2-240E9785064B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KeycloakUserService.Common.Contracts", "src\0. Common\KeycloakUserService.Common.Contracts\KeycloakUserService.Common.Contracts.csproj", "{570F9C9F-CB74-4322-AADB-A7DE07234658}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KeycloakUserService.Common.Extensions", "src\0. Common\KeycloakUserService.Common.Extensions\KeycloakUserService.Common.Extensions.csproj", "{8C22EDFF-CA79-4CD2-ABBF-5A2DDC074507}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KeycloakUserService.API", "src\1. API\KeycloakUserService.API\KeycloakUserService.API.csproj", "{C5C31788-1038-4D55-81E0-37E041F52321}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KeycloakUserService.API.Models", "src\1. API\KeycloakUserService.API.Models\KeycloakUserService.API.Models.csproj", "{6DE2B6CB-11AA-438B-AFA6-F0C9B71EA403}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KeycloakUserService.Domain", "src\2. Domain\KeycloakUserService.Domain\KeycloakUserService.Domain.csproj", "{90BA4B29-B0E8-4BD6-AF47-AA419A9B1120}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KeycloakUserService.Domain.Contracts", "src\2. Domain\KeycloakUserService.Domain.Contracts\KeycloakUserService.Domain.Contracts.csproj", "{727B9512-A0E6-41DB-8E96-4DEC00D1C4CD}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KeycloakUserService.Domain.Entities", "src\2. Domain\KeycloakUserService.Domain.Entities\KeycloakUserService.Domain.Entities.csproj", "{8937BA62-0D0A-4006-B035-02328EE75370}"
 EndProject
@@ -26,9 +38,19 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KeycloakUserService.Infrast
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KeycloakUserService.Infrastructure.Services", "src\3. Infrastructure\KeycloakUserService.Infrastructure.Services\KeycloakUserService.Infrastructure.Services.csproj", "{F7E3D4F7-F0E7-41CC-B8D6-6CA01566BC3D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KeycloakUserService.Infrastructure.Data", "src\3. Infrastructure\KeycloakUserService.Infrastructure.Data\KeycloakUserService.Infrastructure.Data.csproj", "{9C9D08C2-01D3-4138-84A1-1FEEE38356B6}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KeycloakUserService.DAL", "src\4. DAL\KeycloakUserService.DAL\KeycloakUserService.DAL.csproj", "{69411E52-136E-4E3A-9946-AB6EEF479F71}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KeycloakUserService.DAL.Migrator", "src\4. DAL\KeycloakUserService.DAL.Migrator\KeycloakUserService.DAL.Migrator.csproj", "{243C0344-3B5E-4152-AB2A-FAB5BE9BCDB2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KeycloakUserService.Worker.KafkaBus", "src\5. Workers\KeycloakUserService.Worker.KafkaBus\KeycloakUserService.Worker.KafkaBus.csproj", "{7D9AA883-6315-4330-8BA6-2DC98370330B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KeycloakUserService.Worker.RabbitMQ", "src\5. Workers\KeycloakUserService.Worker.RabbitMQ\KeycloakUserService.Worker.RabbitMQ.csproj", "{3173F106-88BB-49DD-B9D6-C31166528A77}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KeycloakUserService.Base", "src\6. Client\KeycloakUserService.Client.Base\KeycloakUserService.Client.Base.csproj", "{C12A6ADA-D0BC-4E21-940A-F57B762E3684}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KeycloakUserService.Client", "src\6. Client\KeycloakUserService.Client\KeycloakUserService.Client.csproj", "{BCD3B9BB-A60B-4EB6-A28B-23A2979A10AE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -72,6 +94,42 @@ Global
 		{243C0344-3B5E-4152-AB2A-FAB5BE9BCDB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{243C0344-3B5E-4152-AB2A-FAB5BE9BCDB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{243C0344-3B5E-4152-AB2A-FAB5BE9BCDB2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C22EDFF-CA79-4CD2-ABBF-5A2DDC074507}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C22EDFF-CA79-4CD2-ABBF-5A2DDC074507}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C22EDFF-CA79-4CD2-ABBF-5A2DDC074507}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C22EDFF-CA79-4CD2-ABBF-5A2DDC074507}.Release|Any CPU.Build.0 = Release|Any CPU
+		{570F9C9F-CB74-4322-AADB-A7DE07234658}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{570F9C9F-CB74-4322-AADB-A7DE07234658}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{570F9C9F-CB74-4322-AADB-A7DE07234658}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{570F9C9F-CB74-4322-AADB-A7DE07234658}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D9AA883-6315-4330-8BA6-2DC98370330B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D9AA883-6315-4330-8BA6-2DC98370330B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D9AA883-6315-4330-8BA6-2DC98370330B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D9AA883-6315-4330-8BA6-2DC98370330B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3173F106-88BB-49DD-B9D6-C31166528A77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3173F106-88BB-49DD-B9D6-C31166528A77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3173F106-88BB-49DD-B9D6-C31166528A77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3173F106-88BB-49DD-B9D6-C31166528A77}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C9D08C2-01D3-4138-84A1-1FEEE38356B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C9D08C2-01D3-4138-84A1-1FEEE38356B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C9D08C2-01D3-4138-84A1-1FEEE38356B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C9D08C2-01D3-4138-84A1-1FEEE38356B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{727B9512-A0E6-41DB-8E96-4DEC00D1C4CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{727B9512-A0E6-41DB-8E96-4DEC00D1C4CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{727B9512-A0E6-41DB-8E96-4DEC00D1C4CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{727B9512-A0E6-41DB-8E96-4DEC00D1C4CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE5E9D19-9776-4CFA-A0E2-240E9785064B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE5E9D19-9776-4CFA-A0E2-240E9785064B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE5E9D19-9776-4CFA-A0E2-240E9785064B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE5E9D19-9776-4CFA-A0E2-240E9785064B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BCD3B9BB-A60B-4EB6-A28B-23A2979A10AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCD3B9BB-A60B-4EB6-A28B-23A2979A10AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCD3B9BB-A60B-4EB6-A28B-23A2979A10AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCD3B9BB-A60B-4EB6-A28B-23A2979A10AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C12A6ADA-D0BC-4E21-940A-F57B762E3684}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C12A6ADA-D0BC-4E21-940A-F57B762E3684}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C12A6ADA-D0BC-4E21-940A-F57B762E3684}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C12A6ADA-D0BC-4E21-940A-F57B762E3684}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{C5C31788-1038-4D55-81E0-37E041F52321} = {46EF7DA6-DB75-4732-B61D-E4284ABAAEBB}
@@ -88,5 +146,16 @@ Global
 		{C8603446-AA6C-4A66-81A2-97B8A91B44A3} = {40BF149C-D552-497E-9136-5532DFBB88C4}
 		{243C0344-3B5E-4152-AB2A-FAB5BE9BCDB2} = {C8603446-AA6C-4A66-81A2-97B8A91B44A3}
 		{69411E52-136E-4E3A-9946-AB6EEF479F71} = {C8603446-AA6C-4A66-81A2-97B8A91B44A3}
+		{06E0A9AB-914E-4906-B604-0CBBFE4BF416} = {40BF149C-D552-497E-9136-5532DFBB88C4}
+		{71B6088F-EAC7-4FCB-8029-EA2E153838B1} = {40BF149C-D552-497E-9136-5532DFBB88C4}
+		{8C22EDFF-CA79-4CD2-ABBF-5A2DDC074507} = {943D2A52-E9C0-4674-8334-731E6F4C63DA}
+		{570F9C9F-CB74-4322-AADB-A7DE07234658} = {943D2A52-E9C0-4674-8334-731E6F4C63DA}
+		{7D9AA883-6315-4330-8BA6-2DC98370330B} = {06E0A9AB-914E-4906-B604-0CBBFE4BF416}
+		{3173F106-88BB-49DD-B9D6-C31166528A77} = {06E0A9AB-914E-4906-B604-0CBBFE4BF416}
+		{9C9D08C2-01D3-4138-84A1-1FEEE38356B6} = {4D818D50-1233-4FC9-90A5-186F09E0F9FF}
+		{727B9512-A0E6-41DB-8E96-4DEC00D1C4CD} = {2ED1F507-F0F4-4647-ACD6-052F7294748A}
+		{EE5E9D19-9776-4CFA-A0E2-240E9785064B} = {943D2A52-E9C0-4674-8334-731E6F4C63DA}
+		{BCD3B9BB-A60B-4EB6-A28B-23A2979A10AE} = {71B6088F-EAC7-4FCB-8029-EA2E153838B1}
+		{C12A6ADA-D0BC-4E21-940A-F57B762E3684} = {71B6088F-EAC7-4FCB-8029-EA2E153838B1}
 	EndGlobalSection
 EndGlobal

@@ -6,4 +6,8 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
+    <ItemGroup>
+        <ProjectReference Include="..\KeycloakUserService.Infrastructure.Data\KeycloakUserService.Infrastructure.Data.csproj" />
+    </ItemGroup>
+
 </Project>

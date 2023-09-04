@@ -7,7 +7,11 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\KeycloakUserService.Domain.Shared\KeycloakUserService.Domain.Shared.csproj" />
+        <ProjectReference Include="..\KeycloakUserService.Client.Base\KeycloakUserService.Client.Base.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="User\Implementation\" />
     </ItemGroup>
 
 </Project>

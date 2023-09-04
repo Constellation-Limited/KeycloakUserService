@@ -10,4 +10,10 @@
       <Folder Include="Handlers\" />
     </ItemGroup>
 
+    <ItemGroup>
+        <ProjectReference Include="..\KeycloakUserService.Domain.Shared\KeycloakUserService.Domain.Shared.csproj" />
+        <ProjectReference Include="..\KeycloakUserService.Domain.Entities\KeycloakUserService.Domain.Entities.csproj" />
+        <ProjectReference Include="..\KeycloakUserService.Domain.Contracts\KeycloakUserService.Domain.Contracts.csproj" />
+    </ItemGroup>
+
 </Project>
