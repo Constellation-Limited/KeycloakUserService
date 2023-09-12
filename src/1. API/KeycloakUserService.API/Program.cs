@@ -1,5 +1,6 @@
 using FastEndpoints;
 using FastEndpoints.Swagger;
+using KeycloakUserService.API.Middlewares;
 using KeycloakUserService.DAL;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -24,6 +25,7 @@ builder.Services.AddDataAccess(builder.Configuration);
 
 var app = builder.Build();
 
+app.UseMiddleware<ErrorHandlingMiddleware>();
 app.UseAuthorization();
 app.UseFastEndpoints(c =>
 {
